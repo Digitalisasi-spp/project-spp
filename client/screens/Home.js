@@ -1,24 +1,6 @@
 import { View, Text, SafeAreaView, StatusBar, Image } from "react-native";
+import { Header } from "../components";
 import React from "react";
-
-const HeaderTop = () => {
-  return (
-    <View className="bg-blue-dark pt-10 pb-7 px-5 flex-row  items-center">
-      <Image
-        source={require("../assets/images/logo.png")}
-        className="w-14 h-14"
-      />
-      <View className="flex-1 ml-4">
-        <Text className="font-bold text-white text-xl">
-          SMK Immanuel Pontianak
-        </Text>
-        <Text className="font-normal mt-1 text-md text-white">
-          Jln.Letjen Sutoyo
-        </Text>
-      </View>
-    </View>
-  );
-};
 
 const Home = () => {
   return (
@@ -30,7 +12,15 @@ const Home = () => {
       />
 
       <View className="flex-1">
-        <HeaderTop />
+        <Header />
+        <View className="px-7 mt-7">
+          <Text className="text-lg font-bold text-sub-blue">
+            Selamat,Datang
+          </Text>
+          <Text className="text-[23px] mt-1 font-bold text-blue-600">
+            Angel Vanessa
+          </Text>
+        </View>
       </View>
     </SafeAreaView>
   );

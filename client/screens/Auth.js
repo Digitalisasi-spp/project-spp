@@ -67,7 +67,7 @@ const Auth = () => {
           </Text>
         </View>
         <View className="px-10 mt-7">
-          <View>
+          {/* <View>
             <TextInput
               defaultValue={userForm.nis}
               onChangeText={(value) => setUserForm({ ...userForm, nis: value })}
@@ -79,7 +79,7 @@ const Auth = () => {
                 showError.isOpen ? "bg-red-200" : "bg-transparent"
               } `}
             />
-          </View>
+          </View> */}
           <View className="my-3">
             <TextInput
               defaultValue={userForm.email}
@@ -125,7 +125,7 @@ const Auth = () => {
             onPress={() => handleSubmit()}
             className="bg-blue-500 mt-10 py-3 px-3 rounded-full"
           >
-            <Text className="text-lg text-center text-white font-semibold">
+            <Text className="text-md text-center text-white font-semibold">
               Login
             </Text>
           </TouchableOpacity>
