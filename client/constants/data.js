@@ -12,3 +12,9 @@ export const welcomeData = [
     page: 2,
   },
 ];
+
+export const dummyData = [
+  {
+    title: "Selamat Data",
+  },
+];
