@@ -1,4 +1,10 @@
-import { TouchableOpacity, View, Text, TextInput } from "react-native";
+import {
+  TouchableOpacity,
+  View,
+  Text,
+  TextInput,
+  KeyboardAvoidingView,
+} from "react-native";
 import {
   PencilAltIcon as PencilAltIconOutline,
   XCircleIcon as XCircleIconOutline,
@@ -8,8 +14,21 @@ import { useState } from "react";
 const ProfileData = ({ title, data, children }) => {
   const [showForm, setShowForm] = useState(false);
 
+  if (title === "Nis Siswa") {
+    return (
+      <View className="w-full mt-3 px-7">
+        <Text className="font-medium mb-3">{title}</Text>
+        <View className="flex-1 flex-row border-b border-gray-400 pb-3">
+          {children}
+
+          <Text className="font-medium text-gray-400 ml-2">{data}</Text>
+        </View>
+      </View>
+    );
+  }
+
   return (
-    <View className="mt-3">
+    <KeyboardAvoidingView className="mt-3 px-7">
       <Text className="font-medium mb-3">{title}</Text>
       {showForm ? (
         <View className="flex-1 flex-row border-b border-gray-300 pb-3">
@@ -34,7 +53,7 @@ const ProfileData = ({ title, data, children }) => {
           </TouchableOpacity>
         </View>
       )}
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
